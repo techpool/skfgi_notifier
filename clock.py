@@ -5,8 +5,7 @@ import threading
 def scrap_call():
 	while True:
 		try:
-			a = requests.post('http://skfginotifier.herokuapp.com/scrap', timeout=40)
-			print(a.json())
+			requests.post('http://skfginotifier.herokuapp.com/scrap', timeout=40)
 		except requests.exceptions.ReadTimeout as e:
 			print(e)
 		finally:
